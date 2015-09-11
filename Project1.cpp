@@ -1,8 +1,8 @@
-/* 
-	Project 1, A recipe qty and cost program
-	Created By: Brian Bui and David Lee
-	Created On: 9/5/2015
-	Last Updated: 9/8/2015
+/*
+Project 1, A recipe qty and cost program
+Created By: Brian Bui and David Lee
+Created On: 9/5/2015
+Last Updated: 9/11/2015
 */
 
 #include <iostream>
@@ -11,13 +11,10 @@ using namespace std;
 int main()
 {
 	// Initialize Variables
-	double sandwichQty;
-	double breadQty;
-	double peanutButterQty;
-	double jellyQty;
-	double breadCost;
-	double peanutButterCost;
-	double jellyCost;
+	double sandwichQty,
+		breadCost,
+		peanutButterCost,
+		jellyCost;
 
 	// Constants for cost calulations
 	const double loafOfBreadCost = 5;
@@ -42,11 +39,12 @@ int main()
 
 	// Display results
 	cout << endl;
-	cout << "In order to make " << sandwichQty << " PP&Js" << endl;
+	cout << "In order to make " << sandwichQty << " PB&Js" << endl;
 	cout << "You will need " << sandwichQty * 2 << " slices of bread which will cost you $" << breadCost << endl;
 	cout << "You will need " << numberOfGramsOfPeanutButterInOneSandwich * sandwichQty << " grams of peanut butter which will cost you $" << peanutButterCost << endl;
 	cout << "You will need " << numberOfOuncesInJellyJar * sandwichQty << " grams of jelly which will cost you $" << jellyCost << endl;
-	cout << "You will need to spend $" << breadCost + peanutButterCost + jellyCost << " in total";
+	cout << "You will need to spend $" << breadCost + peanutButterCost + jellyCost << " without tax, or " << endl;
+	cout << (breadCost + peanutButterCost + jellyCost) * 1.08 << "$ with tax.";
 	cout << endl;
 	cout << endl;
 
